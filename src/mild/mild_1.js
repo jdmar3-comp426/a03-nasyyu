@@ -59,14 +59,13 @@ export function maxAndMin(numbers) {
             maxAndMin[0] = numbers[i];
         }
     }
-    return Math.maxAndMin(maxAndMin);
-   /*  let minMaxReturn = {
+    //return Math.maxAndMin(maxAndMin);
+     let minMaxReturn = {
         min: maxAndMin[0],
         max: maxAndMin[1]
     } 
-    */
-   // return minMaxReturn;
-   // return minMaxReturn;
+    
+    return minMaxReturn;
 }
 
 /**
