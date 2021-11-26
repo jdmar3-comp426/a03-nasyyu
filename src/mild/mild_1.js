@@ -83,8 +83,22 @@ export function maxAndMin(numbers) {
  */
 export function countArray(array) {
     let keys = []; // keeps track of each unique value in array
-    let count = []; // keeps track of the number of each value in array
-    for (let i = 0; i < array.length; i++) { // loops though the array to check each piece
+    let count =  0; // keeps track of the number of each value in array
+    let obj = {};
+    let arrayPointer = 0;
+    array.sort();
+    keys[0] = array[0];
+    for (let i = 0; i < length(array); i++) {
+        count = 0;
+        for (let j = 0; keys[i] == array[j]; j++) {
+            count += 1;
+            arrayPointer += 1;
+        }
+        obj[keys[i]][count];
+        keys[i+1] = array[arrayPointer-1];
+    }
+    return obj;
+    /* for (let i = 0; i < array.length; i++) { // loops though the array to check each piece
         let alreadyIn = false; // true if the value has already been added to keys[]
         let currentChecker = array[i]; // current key checker
         for (let k = 0; k < i; k++) { // loops through the array to check if the piece is already in the array
@@ -107,6 +121,6 @@ export function countArray(array) {
         let countValue = count[i]; // value in count array stored in count value
         counter = {
             keyvalue: countValue
-         } // does this add the correct thing? idk
-    }
+         } */// does this add the correct thing? idk */
+        
 }
