@@ -31,7 +31,9 @@ export function getMedian(array) {
     for (let i=0; i<array.length; i++) {
         ordered[i] = array[i];
     }
-    ordered.sort(function(a,b){return a-b});
+    ordered = ordered.sort(function(a,b){
+        return a-b;
+    });
 
     if (array.length%2 == 1) {
         //odd
