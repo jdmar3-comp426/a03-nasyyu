@@ -37,7 +37,6 @@ export function identifyArray(array) {
    for (let i = 0; i < array.length; i++) {
       obj[i].type = typeof array[i];
       obj[i].value = array[i];
-      x.push(obj[i]);
    }
    return x;
 }
