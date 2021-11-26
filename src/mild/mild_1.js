@@ -90,12 +90,12 @@ export function countArray(array) {
     keys[0] = array[0];
     for (let i = 0; i < array.length; i++) {
         count = 0;
-        for (let j = 0; keys[i] == array[j]; j++) {
+        while( keys[i] == array[arrayPointer]) {
             count += 1;
             arrayPointer += 1;
         }
         obj[keys[i]][count];
-        keys[i+1] = array[arrayPointer-1];
+        keys[i+1] = array[arrayPointer];
     }
     return obj;
     /* for (let i = 0; i < array.length; i++) { // loops though the array to check each piece
