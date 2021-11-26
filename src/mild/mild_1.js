@@ -41,8 +41,8 @@ export function getIncreasingArray(startNumber, endNumber) {
  */
 export function maxAndMin(numbers) {
     let maxAndMin = [];
-    maxAndMin[0] = Math.max; // min number stored in 0
-    maxAndMin[1] = Math.min; // max number stored in 1
+    maxAndMin[0] = 1000000; // min number stored in 0
+    maxAndMin[1] = 0; // max number stored in 1
     
     /* let maxN = Math.max(numbers);
     let minN = Math.min(numbers);
@@ -51,18 +51,19 @@ export function maxAndMin(numbers) {
         max: maxN
     } 
     */
+   
    for (let i = 0; i < numbers.length; i++) {
-        if (numbers[i] > maxAndMin[1]) {
+        if (numbers[i] > maxAndMin[1]) { //max num
             maxAndMin[1] = numbers[i];
         }
-        if (numbers[i] < maxAndMin[0]) {
+        if (numbers[i] < maxAndMin[0]) { //min num
             maxAndMin[0] = numbers[i];
         }
     }
     //return Math.maxAndMin(maxAndMin);
      let minMaxReturn = {
+        max: maxAndMin[1],
         min: maxAndMin[0],
-        max: maxAndMin[1]
     } 
     
     return minMaxReturn;
