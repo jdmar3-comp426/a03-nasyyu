@@ -8,8 +8,8 @@
  export function identifyVariable(variable) {
    let x = typeof variable;
    let vari = {
-      type: [x],
-      value: [variable]
+      type: x,
+      value: variable
    }
    return vari;
 }
@@ -35,9 +35,9 @@ export function identifyArray(array) {
       value: ''
    }
    for (let i = 0; i < array.length; i++) {
-      obj.type = typeof array[i];
-      obj.value = array[i];
-      x.push(obj);
+      obj[i].type = typeof array[i];
+      obj[i].value = array[i];
+      x.push(obj[i]);
    }
    return x;
 }
