@@ -105,6 +105,8 @@ export function countArray(array) {
     for (let i = 0; i < keys.length; i++) { // loops through keys and count to create counter object
         let keyValue = keys[i]; // value in keys array stored in keyValue
         let countValue = count[i]; // value in count array stored in count value
-        counter[keyValue]= countValue; // does this add the correct thing? idk
+        counter = {
+            keyvalue: countValue
+         } // does this add the correct thing? idk
     }
 }
