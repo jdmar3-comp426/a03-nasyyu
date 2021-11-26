@@ -52,10 +52,10 @@ export function maxAndMin(numbers) {
     } 
     */
    for (let i = 0; i < numbers.length; i++) {
-        if (number[i] > max) {
+        if (numbers[i] > max) {
             maxAndMin[1] = number[i];
         }
-        if (number[i] < min) {
+        if (numbers[i] < min) {
             maxAndMin[0] = number[i];
         }
     }
