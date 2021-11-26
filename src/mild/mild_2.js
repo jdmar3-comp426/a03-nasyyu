@@ -33,6 +33,7 @@ export function identifyArray(array) {
    let obj = Object;
    for (let i = 0; i < array.length; i++) {
       let x = typeof array[i];
+      obj[i] = {};
       obj[i].type = x;
       obj[i].value = array[i];
    }
