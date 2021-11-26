@@ -88,7 +88,8 @@ export function countArray(array) {
     let arrayPointer = 0;
     array.sort();
     keys[0] = array[0];
-    for (let i = 0; i < array.length; i++) {
+    let length = array.length;
+    for (let i = 0; i < length; i++) {
         count = 0;
         while(keys[i] == array[arrayPointer]) {
             count += 1;
@@ -96,6 +97,7 @@ export function countArray(array) {
         }
         obj[keys[i]] = count;
         keys[i+1] = array[arrayPointer];
+        length = length - arrayPointer;
     }
     return obj;
     /* for (let i = 0; i < array.length; i++) { // loops though the array to check each piece
