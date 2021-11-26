@@ -88,7 +88,7 @@ export function countArray(array) {
     let arrayPointer = 0;
     array.sort();
     keys[0] = array[0];
-    for (let i = 0; i < length(array); i++) {
+    for (let i = 0; i < array.length; i++) {
         count = 0;
         for (let j = 0; keys[i] == array[j]; j++) {
             count += 1;
