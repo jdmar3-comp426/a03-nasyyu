@@ -68,7 +68,7 @@ export function maxAndMin(numbers) {
         min: mined
     } 
     return minMaxReturn; */
-    return [Math.min(...numbers), Math.max(...numbers)];
+    return [ "max: " + Math.max(...numbers), "min: " + Math.min(...numbers)];
 }
 
 /**
