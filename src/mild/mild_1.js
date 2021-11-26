@@ -94,7 +94,7 @@ export function countArray(array) {
             count += 1;
             arrayPointer += 1;
         }
-        obj[keys[i]][count];
+        obj[keys[i]] = count;
         keys[i+1] = array[arrayPointer];
     }
     return obj;
