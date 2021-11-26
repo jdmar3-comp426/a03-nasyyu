@@ -51,7 +51,7 @@ export function maxAndMin(numbers) {
         max: maxN
     } 
     */
-   
+
    for (let i = 0; i < numbers.length; i++) {
         if (numbers[i] > maxAndMin[1]) { //max num
             maxAndMin[1] = numbers[i];
@@ -60,10 +60,12 @@ export function maxAndMin(numbers) {
             maxAndMin[0] = numbers[i];
         }
     }
+    let maxed = maxAndMin[1];
+    let mined = maxAndMin[0];
     //return Math.maxAndMin(maxAndMin);
      let minMaxReturn = {
-        max: maxAndMin[1],
-        min: maxAndMin[0],
+        max: maxed,
+        min: mined
     } 
     
     return minMaxReturn;
