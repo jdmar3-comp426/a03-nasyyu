@@ -90,7 +90,7 @@ export function countArray(array) {
     keys[0] = array[0];
     for (let i = 0; i < array.length; i++) {
         count = 0;
-        while( keys[i] == array[arrayPointer]) {
+        while(keys[i] == array[arrayPointer]) {
             count += 1;
             arrayPointer += 1;
         }
