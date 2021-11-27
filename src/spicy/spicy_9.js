@@ -167,8 +167,8 @@ export const filter = (arr, test) => {
         }
     }
     let obj = {
-        fail: fail,
-        pass: pass
+        pass: pass,
+        fail: fail        
     }
     return obj;
 };
