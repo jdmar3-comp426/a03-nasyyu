@@ -28,10 +28,10 @@ export const repeat = (fn, n, ...params) => {
  *   10 times.
  */
 export const repeatDemo = () => {
-    let x = [];
+   /* let x = [];
     for (let i = 0; i<10; i++) {
         x[i] = "Hello, world!"; 
-    }
+    } */
     repeat(function consoleLog(string) { console.log(string)}, 10, "Hello, world!","Hello, world!","Hello, world!","Hello, world!","Hello, world!","Hello, world!","Hello, world!","Hello, world!","Hello, world!","Hello, world!"); 
 };
 
