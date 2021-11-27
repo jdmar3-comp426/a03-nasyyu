@@ -84,7 +84,7 @@ export function maxAndMin(numbers) {
 export function countArray(array) {
     let keys = []; // keeps track of each unique value in array
     let count =  0; // keeps track of the number of each value in array
-    let obj = Object; 
+    let obj = {}; 
     let arrayPointer = 0;
     array.sort();
     keys[0] = array[0]; // if 13, 13, 14, 14, 16, 16, 16
