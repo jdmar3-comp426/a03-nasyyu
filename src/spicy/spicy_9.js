@@ -180,7 +180,7 @@ export const filter = (arr, test) => {
  *   odd numbers. Use the "everyEven" function in this function.
  */
 export const allEvensAreOdd = (arr) => {
-
+    return everyEven(arr, isOdd());
 };
 
 
@@ -190,7 +190,7 @@ export const allEvensAreOdd = (arr) => {
  *   array is an odd number. Use the "someEven" function in this function.
  */
 export const anEvenIsOdd = (arr) => {
-
+    return someEven(arr, isOdd());
 };
 
 
@@ -201,5 +201,9 @@ export const anEvenIsOdd = (arr) => {
  *   pass the test. You must use the filter function.
  */
 export const hasExactly = (arr, test, n) => {
-
+    let x = filter(arr, test);
+    if (x.pass.length == n) {
+        return true;
+    }
+    return false;
 };
