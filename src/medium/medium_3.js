@@ -77,7 +77,7 @@ export function searchName(car_data, searchTerm) {
             return 1;
         }
     })
-    x = x.sort(compareStringIndex(a,b,searchTerm));
+    //x = x.sort(compareStringIndex(a,b,searchTerm));
     return x;
 }
 
