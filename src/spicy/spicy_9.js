@@ -19,6 +19,7 @@ export const repeat = (fn, n, ...params) => {
     for (let i = 0; i <= n; i++) {
         x[i] = fn(params[i]);
     }
+    return x;
 };
 
 
@@ -31,7 +32,7 @@ export const repeatDemo = () => {
     for (let i = 0; i<10; i++) {
         x[i] = "Hello, world!";
     }
-    repeat(function consoleLog(string) { console.log(string)}, 10, "Hello, world!"); 
+    repeat(function consoleLog(string) { console.log(string)}, 10, "Hello, world!","Hello, world!","Hello, world!","Hello, world!","Hello, world!","Hello, world!","Hello, world!","Hello, world!","Hello, world!","Hello, world!"); 
 };
 
 
