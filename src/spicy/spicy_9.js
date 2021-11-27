@@ -15,7 +15,10 @@
  *                from calling the function
  */
 export const repeat = (fn, n, ...params) => {
-
+    let x = [];
+    for (let i = 0; i <= n; i++) {
+        x[i] = fn(params[i]);
+    }
 };
 
 
@@ -24,7 +27,11 @@ export const repeat = (fn, n, ...params) => {
  *   10 times.
  */
 export const repeatDemo = () => {
-
+    let x = [];
+    for (let i = 0; i<10; i++) {
+        x[i] = "Hello, world!";
+    }
+    repeat(console.log(), 10, x);
 };
 
 
@@ -41,7 +48,9 @@ export const repeatDemo = () => {
  *   product of num1 and num2.
  */
 export const multiplyBy = (num1) => {
-
+   return function mult(num2) {
+        return num1 * num2;
+    }
 };
 
 
@@ -49,7 +58,7 @@ export const multiplyBy = (num1) => {
  * Use the multiplyBy function to create and export a function named
  *   "tenTimes" that multiplies a number by 10.
  */
-export const tenTimes = undefined;
+export const tenTimes = multiplyBy(num1)(10);
 
 
 /**
@@ -57,7 +66,9 @@ export const tenTimes = undefined;
  *   function to multiply 50 by 10 and returns the result.
  */
 export const tenTimesFifty = () => {
-
+    let answer = 0;
+    answer = tenTimes(50);
+    return answer;
 };
 
 
