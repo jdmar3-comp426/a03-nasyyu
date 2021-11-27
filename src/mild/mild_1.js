@@ -96,7 +96,7 @@ export function countArray(array) {
             arrayPointer += 1;
         }
         obj[keys[i]] = count;
-        keys[i+1] = array[arrayPointer];
+        keys[i+1] = array[arrayPointer -1];
     }
     return obj;
     /* for (let i = 0; i < array.length; i++) { // loops though the array to check each piece
