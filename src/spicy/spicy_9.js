@@ -31,7 +31,7 @@ export const repeatDemo = () => {
     for (let i = 0; i<10; i++) {
         x[i] = "Hello, world!";
     }
-    repeat(function(callback){ console.log(callback.toString())}, 10, x); 
+    repeat(function consoleLog(string) { console.log(string)}, 10, x); 
 };
 
 
