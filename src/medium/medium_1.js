@@ -23,6 +23,7 @@ export function getSum(array) {
  *
  * example:
  * let array = [3,2,5,6,2,7,4,2,7,5];
+ * 2, 2, 2, 3, 4, 5, 5, 6, 7, 7
  * console.log(getMedian(array)); // 4.5
  */
 export function getMedian(array) {
@@ -30,8 +31,11 @@ export function getMedian(array) {
     array = array.sort(function(a,b){
         return a-b;
     });
-
-    if (array.length%2 == 1) {
+    let x = 0;
+    while (x > 1) {
+        x = x%2;
+    }
+    if (x == 1) {
         //odd 
         median = array[array.length+1/2 - 1];
         // length is 7: 7+1 = 8/2 = 4 - 1 = 3
