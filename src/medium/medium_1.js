@@ -80,13 +80,15 @@ obj.length = array.length;
 obj.sum = getSum(array);
 obj.mean = mean;
 obj.median = getMedian(array);
+obj.min = Math.min(...array);
+obj.max = Math.max(...array);
 obj.variance = variance(array, mean);
 let meanArray = [];
 for (let i = 0; i < array.length; i++) {
     meanArray[i] = (array[i]-mean)**2;
 }
-let meanArrayMean = getSum(meanArray)/meanArray.length;
-obj.standard_deviation = (meanArrayMean)**1/2;
+let meanArrayMean = getSum(meanArray)/array.length;
+obj.standard_deviation = Math.sqrt(meanArrayMean);
 return obj;
 }
 
