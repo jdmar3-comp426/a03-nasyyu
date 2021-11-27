@@ -97,7 +97,7 @@ export function searchByYear(car_data, years) {
     let x = [];
     for (let i = 0; i < years.length; i++) {
         for (let j = 0; j < car_data.length; j++) {
-            if (car_data[j].year == year[i]) {
+            if (car_data[j].year == years[i]) {
                 x.push(car_data[j]);
             }
         }
