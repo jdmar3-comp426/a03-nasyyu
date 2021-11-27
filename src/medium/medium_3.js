@@ -63,10 +63,10 @@ export function searchName(car_data, searchTerm) {
     let x = [];
     for (let i = 0; i < car_data.length; i++) {
         if (car_data[i].id.includes(searchTerm)) {
-            x[i] = car_data[i];
+            x.push(car_data[i]);
         }
     }
-    /*x.sort(function(a,b) {
+    x.sort(function(a,b) {
         if (a.indexOf(searchTerm) < b.indexOf(searchTerm)) {
             return -1;
         }
@@ -76,7 +76,7 @@ export function searchName(car_data, searchTerm) {
         if (a.indexOf(searchTerm) > b.indexOf(searchTerm)) {
             return 1;
         }
-    })*/
+    })
     //x = x.sort(compareStringIndex(a,b,searchTerm));
     return x;
 }
