@@ -174,13 +174,20 @@ export const filter = (arr, test) => {
 };
 
 
+
+function odd(num) {
+    if (num.isOdd()) {
+        return true;
+    }
+    return false;
+}
 /**
  * Write and export a function named "allEvensAreOdd" which takes as input an
  *   array and returns true only if all of the even elements in the array are
  *   odd numbers. Use the "everyEven" function in this function.
  */
 export const allEvensAreOdd = (arr) => {
-    return everyEven(arr, isOdd());
+    return everyEven(arr, odd());
 };
 
 
@@ -190,7 +197,7 @@ export const allEvensAreOdd = (arr) => {
  *   array is an odd number. Use the "someEven" function in this function.
  */
 export const anEvenIsOdd = (arr) => {
-    return someEven(arr, isOdd());
+    return someEven(arr, odd());
 };
 
 
