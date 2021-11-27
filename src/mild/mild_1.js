@@ -84,19 +84,23 @@ export function maxAndMin(numbers) {
 export function countArray(array) {
     let keys = []; // keeps track of each unique value in array
     let count =  0; // keeps track of the number of each value in array
-    let obj = Object;
+    let obj = Object; 
     let arrayPointer = 0;
     array.sort();
-    keys[0] = array[0];
-    let length = array.length;
-    for (let i = 0; i < length; i++) {
-        count = 0;
-        while(keys[i] == array[arrayPointer]) {
-            count += 1;
-            arrayPointer += 1;
+    keys[0] = array[0]; // if 13, 13, 14, 14, 16, 16, 16
+    let length = array.length; // 7
+    for (let i = 0; i < length; i++) { // i = 3
+        count = 0; 
+        while(keys[i] == array[arrayPointer]) { // 16 == 16
+            count += 1; // 3
+            arrayPointer += 1; // 7
         }
-        obj[keys[i]] = count;
-        keys[i+1] = array[arrayPointer -1];
+        obj[keys[i]] = count; // obj 13 = 2, obj 14 = 2, obj 16 = 3
+        if (arrayPointer < array.length) {
+            keys[i+1] = array[arrayPointer]; // keys[1] = 14, keys[2] = 16
+        } else {
+            break;
+        }
     }
     return obj;
     /* for (let i = 0; i < array.length; i++) { // loops though the array to check each piece
