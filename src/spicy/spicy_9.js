@@ -31,7 +31,7 @@ export const repeatDemo = () => {
     for (let i = 0; i<10; i++) {
         x[i] = "Hello, world!";
     }
-    repeat(console.log(), 10, x);
+    repeat(console.log(JSON.parse(JSON.stringify(num))), 10, x);
 };
 
 
