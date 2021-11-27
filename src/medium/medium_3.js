@@ -66,10 +66,21 @@ export function searchName(car_data, searchTerm) {
             x[i] = car_data[i];
         }
     }
+    x = x.sort(compareStringIndex(a,b,searchTerm));
     return x;
 }
 
-
+function compareStringIndex(a, b, searchString) {
+    if (a.indexOf(searchString) < b.indexOf(searchString)) {
+        return -1;
+    }
+    if (a.indexOf(searchString) == b.indexOf(searchString)) {
+        return 0;
+    }
+    if (a.indexOf(searchString) > b.indexOf(searchString)) {
+        return 1;
+    }
+} 
 
 /**
  * Find all cars made in the years asked for.
