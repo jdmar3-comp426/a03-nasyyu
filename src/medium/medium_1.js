@@ -87,5 +87,6 @@ for (let i = 0; i < array.length; i++) {
 }
 let meanArrayMean = getSum(meanArray)/meanArray.length;
 obj.standard_deviation = (meanArrayMean)**1/2;
+return obj;
 }
 
