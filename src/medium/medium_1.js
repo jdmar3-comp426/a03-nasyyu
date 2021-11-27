@@ -31,10 +31,9 @@ export function getMedian(array) {
     array = array.sort(function(a,b){
         return a-b;
     });
-    let x = 0;
-    while (x > 1) {
-        x = x%2;
-    }
+    function isOdd(num) { return num % 2;}
+    let x = array.length;
+    x = isOdd(x);
     if (x == 1) {
         //odd 
         median = array[array.length+1/2 - 1];
