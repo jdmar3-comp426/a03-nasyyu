@@ -27,22 +27,19 @@ export function getSum(array) {
  */
 export function getMedian(array) {
     let median = 0;
-    let ordered = [];
-    for (let i=0; i<array.length; i++) {
-        ordered[i] = array[i];
-    }
-    ordered = ordered.sort(function(a,b){
+    array = array.sort(function(a,b){
         return a-b;
     });
 
     if (array.length%2 == 1) {
-        //odd
-        median = ordered[array.length+1/2];
+        //odd 
+        median = array[array.length+1/2 - 1];
+        // length is 7: 7+1 = 8/2 = 4 - 1 = 3
     } else {
-        //even
-        let even1 = ordered[array.length/2];
-        let even2 = ordered[array.length/2+1];
-        median = even1/even2; 
+        //even length
+        let even1 = array[array.length/2-1];
+        let even2 = array[array.length/2];
+        median = even1+even2/2;
     }
     return median;
    /* for (let i = 0; i < array.length; i++) {
