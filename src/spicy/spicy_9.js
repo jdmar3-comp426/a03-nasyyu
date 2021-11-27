@@ -32,7 +32,7 @@ export const repeatDemo = () => {
     for (let i = 0; i<10; i++) {
         x[i] = "Hello, world!";
     }
-    repeat(function consoleLog(string) { console.log(string)}, 10, "Hello, world!","Hello, world!","Hello, world!","Hello, world!","Hello, world!","Hello, world!","Hello, world!","Hello, world!","Hello, world!","Hello, world!"); 
+    repeat(function consoleLog(string) { console.log(string)}, 10, "Hello, world!","Hello, world!","Hello, world!","Hello, world!","Hello, world!","Hello, world!","Hello, world!","Hello, world!","Hello, world!","Hello, world!","Hello, world!"); 
 };
 
 
