@@ -98,9 +98,10 @@ export function countArray(array) {
         obj[keys[i]] = count; // obj 13 = 2, obj 14 = 2, obj 16 = 3
         if (arrayPointer < array.length) {
             keys[i+1] = array[arrayPointer]; // keys[1] = 14, keys[2] = 16
-        } else {
-            break;
         }
+        /* else {
+            break;
+        } */
     }
     return obj;
     /* for (let i = 0; i < array.length; i++) { // loops though the array to check each piece
