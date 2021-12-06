@@ -18,7 +18,14 @@ queries.
  *
  */
 export function searchHighPower(car_data, minHorsepower, minTorque) {
-
+    let returnArray = [];
+    for (let i = 0; i < car_data.length; i++) {
+        if (car_data[i].horsepower >= minHorsepower && car_data[i].torque >= minTorque) {
+            returnArray.push(car_data[i]);
+        }
+    }
+    returnArray = returnArray.sort((a, b) => b-a);
+    return returnArray;
 }
 
 
@@ -33,7 +40,14 @@ export function searchHighPower(car_data, minHorsepower, minTorque) {
  *
  */
 export function searchMpg(car_data, minCity, minHighway) {
-
+    let returnArray = [];
+    for (let i = 0; i < car_data.length; i++) {
+        if (car_data[i].city_mpg >= minCity && car_data[i].highway_mpg >= minHighway) {
+            returnArray.push(car_data[i]);
+        }
+    }
+    returnArray = returnArray.sort((a, b) => b-a);
+    return returnArray;
 }
 
 
@@ -46,9 +60,30 @@ export function searchMpg(car_data, minCity, minHighway) {
  * @returns {[]} array of cars
  */
 export function searchName(car_data, searchTerm) {
-
+    let x = [];
+    for (let i = 0; i < car_data.length; i++) {
+        if (car_data[i].id.includes(searchTerm)) {
+            x.push(car_data[i]);
+        }
+    }
+    x.sort(function(a,b) {
+        if (a.indexOf(searchTerm) < b.indexOf(searchTerm)) {
+            return -1;
+        }
+        if (a.indexOf(searchTerm) == b.indexOf(searchTerm)) {
+            return 0;
+        }
+        if (a.indexOf(searchTerm) > b.indexOf(searchTerm)) {
+            return 1;
+        }
+    })
+    //x = x.sort(compareStringIndex(a,b,searchTerm));
+    return x;
 }
 
+/*function compareStringIndex(a, b, searchString) {
+   
+} */
 
 /**
  * Find all cars made in the years asked for.
@@ -59,5 +94,14 @@ export function searchName(car_data, searchTerm) {
  * @returns {[]} an array of car objects
  */
 export function searchByYear(car_data, years) {
-
+    let x = [];
+    for (let i = 0; i < years.length; i++) {
+        for (let j = 0; j < car_data.length; j++) {
+            if (car_data[j].year == years[i]) {
+                x.push(car_data[j]);
+            }
+        }
+    }
+    x.sort(function(a,b){ b-a });
+    return x;
 }
